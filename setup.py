@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 long_description = """A library that provides feature importances, based upon
 the permutation importance strategy, for general scikit-learn
