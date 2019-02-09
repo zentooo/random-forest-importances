@@ -19,6 +19,7 @@ setup(
     author_email='parrt@antlr.org, kcturgutlu@dons.usfca.edu',
     install_requires=['numpy','pandas','sklearn','matplotlib'],
     description='Permutation and drop-column importance for scikit-learn random forests and other models',
+    packages=find_packages(include=['rfpimp']),
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords='scikit-learn random forest feature permutation importances',
