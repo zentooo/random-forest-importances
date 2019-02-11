@@ -512,7 +512,7 @@ def stemplot_importances(df_importances,
         y += (wprev + w)/2 * unit
         yloc.append(y)
     yloc = np.array(yloc)
-    ax.xaxis.set_major_formatter(FormatStrFormatter(f'%.{xtick_precision}f'))
+    ax.xaxis.set_major_formatter(FormatStrFormatter('%.{}f'.format(xtick_precision)))
     ax.set_xticks([maxdrop, imp_range[1]])
     ax.tick_params(labelsize=label_fontsize, labelcolor=GREY)
     ax.invert_yaxis()  # labels read top-to-bottom
@@ -625,7 +625,7 @@ def plot_importances(df_importances,
         y += (wprev + w)/2 * unit + ypadding
         yloc.append(y)
     yloc = np.array(yloc)
-    ax.xaxis.set_major_formatter(FormatStrFormatter(f'%.{xtick_precision}f'))
+    ax.xaxis.set_major_formatter(FormatStrFormatter('%.{}f'.format(xtick_precision)))
     # too close to show both max and right edge?
     if maxdrop/imp_range[1] > 0.9 or maxdrop < 0.02:
         ax.set_xticks([0, imp_range[1]])
